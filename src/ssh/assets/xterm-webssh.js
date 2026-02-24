@@ -344,7 +344,7 @@ const TerminalHelper = {
             TerminalHelper.endCopySelectedTextCallback();
             TerminalHelper.endCopySelectedTextCallback = null;
         }
-    }, 250),
+    }, navigator.platform.startsWith('Mac') ? 1 : 250),
 
     copyScreenContent: function () {
         TerminalHelper.canNotifySelectionChange = false;
